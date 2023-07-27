@@ -6,6 +6,9 @@ import MyPageScreen from '../pages/MyPage.jsx';
 import VolunteerScreen from '../pages/VolunteerPage.jsx';
 import MapScreen from '../pages/MapPage.jsx';
 import GardeningScreen from '../pages/GardeningPage.jsx';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons.js';
+import MatericalIcons from 'react-native-vector-icons/MaterialIcons.js';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5.js';
 
 const Tab = createBottomTabNavigator();
 
@@ -72,6 +75,9 @@ function BottomTabNavigator() {
           headerStyle: {
             backgroundColor: '#77EBC1',
           },
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="home" color={color} size={33} />
+          ),
         }}
       />
       <Tab.Screen
@@ -83,6 +89,9 @@ function BottomTabNavigator() {
           headerStyle: {
             backgroundColor: '#77EBC1',
           },
+          tabBarIcon: ({color, size}) => (
+            <MatericalIcons name="volunteer-activism" color={color} size={30} />
+          ),
         }}
       />
       <Tab.Screen
@@ -94,6 +103,9 @@ function BottomTabNavigator() {
           headerStyle: {
             backgroundColor: '#77EBC1',
           },
+          tabBarIcon: ({color, size}) => (
+            <FontAwesome5 name="map-marked-alt" color={color} size={30} />
+          ),
         }}
       />
       <Tab.Screen
@@ -105,6 +117,9 @@ function BottomTabNavigator() {
           headerStyle: {
             backgroundColor: '#77EBC1',
           },
+          tabBarIcon: ({color, size}) => (
+            <FontAwesome5 name="seedling" color={color} size={30} />
+          ),
         }}
       />
       <Tab.Screen
@@ -116,6 +131,13 @@ function BottomTabNavigator() {
           headerStyle: {
             backgroundColor: '#77EBC1',
           },
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="account-settings"
+              color={color}
+              size={35}
+            />
+          ),
         }}
       />
     </Tab.Navigator>
