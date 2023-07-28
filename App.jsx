@@ -1,13 +1,19 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import BottomTabNavigator from './components/BottomNavigator.jsx';
+import { View } from 'react-native';
+import TextInputExample from './login/LoginPage.jsx';
 
 function App() {
   return (
-    <NavigationContainer>
+    <View>
+      <TextInputExample />
+    </View>
+    /*<NavigationContainer>
       <BottomTabNavigator />
-    </NavigationContainer>
+    </NavigationContainer>*/
   );
 }
 
 export default App;
+

@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native'
 import * as React from 'react';
 
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={{color: 'black'}}>Home Screen</Text>
+      <Text style={{color: 'black'}}>Home ScreenSS</Text>
     </View>
   );
 }
