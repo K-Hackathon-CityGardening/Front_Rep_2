@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TextInput, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import { StyleSheet, View, TextInput, Text, TouchableOpacity, Alert } from "react-native";
 
-const loginpage = () => {
+const Login = () => {
   const [id, setid] = useState("");
   const [password, setpassword] = useState("");
 
-  const login = () => {
+  const pressLoginButton = () => {
     console.log("id:", id);
     console.log("password:", password);
+
+    if(id=="y"&&password=="y"){
+      console.log("로그인 성공!");
+    }
   };
 
   return (
@@ -29,7 +33,7 @@ const loginpage = () => {
         secureTextEntry
       />
 
-      <TouchableOpacity onPress={login}>
+      <TouchableOpacity onPress={pressLoginButton}>
         <Text style={styles.loginButtonText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
@@ -65,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default loginpage;
+export default Login;

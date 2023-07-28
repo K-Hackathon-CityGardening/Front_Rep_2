@@ -2,16 +2,27 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import BottomTabNavigator from './components/BottomNavigator.jsx';
 import { View } from 'react-native';
-import TextInputExample from './login/LoginPage.jsx';
+import {useState} from 'react';
+import Login from './login/LoginPage.jsx';
 
 function App() {
+  const [isLogin, setIsLogin]=useState(false);
+
+  const isLoginSuccess=()=>
+  {
+    setIsLogin(true);
+  };
   return (
     <View>
-      <TextInputExample />
+      {isLogin ? (
+        <NavigationContainer>
+          <BottomTabNavigator />
+        </NavigationContainer>
+      ):
+      (
+        <Login onLoginSuccess={isLoginSuccess} />
+      )}
     </View>
-    /*<NavigationContainer>
-      <BottomTabNavigator />
-    </NavigationContainer>*/
   );
 }
 
