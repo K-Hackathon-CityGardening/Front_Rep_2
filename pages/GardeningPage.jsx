@@ -85,7 +85,8 @@ function GardeningScreen() {
           selectedRegion={selectedRegion}
           selectedCity={selectedCity}
           onRegionSelect={handleRegionSelect}
-          onCitySelect={handleCitySelect}></LocationModal>
+          onCitySelect={handleCitySelect}
+        />
       </View>
     </View>
   );
